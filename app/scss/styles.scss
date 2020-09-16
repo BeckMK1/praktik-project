@@ -3,11 +3,13 @@ body{
 height: 100%;
 margin: 0;
 }
+
 .title{
 position: absolute;
 right: 59%;
 top:8%;
 }
+// position and size of the reviews and the background
 #reviews-container{
     display: flex;
     justify-content: center;
@@ -28,6 +30,7 @@ display: flex;
 flex-direction: row;
 top:45%
 }
+// styling of each individual review and it's content
 .review{
 width: 416px;
 height: 264px;

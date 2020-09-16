@@ -1,4 +1,5 @@
-let allReviews = [
+// all review are stored here
+let allReviews = [    
 {
     name:"naven navensen",
     foto:"./images/placeholder.jpg",
@@ -28,13 +29,14 @@ let allReviews = [
     discription:"det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 ]
+// error checking 
 console.log(allReviews)
-
+// appends all reviews to html
 function appendreviws(reviews){
-    let htmltemplate ="";
     for (let review of reviews){
+        // error checking 
         console.log(review)
-
+        // here is how the content is setup for the html, and added in the div whit the id review
         document.querySelector("#reviews").innerHTML+=`<article class="review">
         <div class="foto"><img src="${review.foto}"></div>
         <div class="review-background">
@@ -48,4 +50,5 @@ function appendreviws(reviews){
     }
 
 }
+// execute the append function using the data in the array allReviews
 appendreviws(allReviews);
