@@ -1,32 +1,53 @@
 // all review are stored here
 let allReviews = [    
 {
-    name:"naven navensen",
+    name:"Naven navensen",
     foto:"./images/placeholder.jpg",
-    occupation:"virksomhedsejer",
+    occupation:"Virksomhedsejer",
     stars:5,
-    discription:"det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
+    discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 {
-    name:"naven navensen",
+    name:"Naven navensen",
     foto:"./images/placeholder.jpg",
-    occupation:"virksomhedsejer",
+    occupation:"Virksomhedsejer",
     stars:5,
-    discription:"det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
+    discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 {
-    name:"naven navensen",
+    name:"Naven navensen",
     foto:"./images/placeholder.jpg",
-    occupation:"virksomhedsejer",
+    occupation:"Virksomhedsejer",
     stars:5,
-    discription:"det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
+    discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 {
-    name:"naven navensen",
+    name:"Naven navensen",
     foto:"./images/placeholder.jpg",
-    occupation:"virksomhedsejer",
+    occupation:"Virksomhedsejer",
     stars:5,
-    discription:"det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
+    discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
+},
+{
+    name:"Naven navensen",
+    foto:"./images/placeholder.jpg",
+    occupation:"Virksomhedsejer",
+    stars:5,
+    discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
+},
+{
+    name:"Naven navensen",
+    foto:"./images/placeholder.jpg",
+    occupation:"Virksomhedsejer",
+    stars:5,
+    discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
+},
+{
+    name:"Naven navensen",
+    foto:"./images/placeholder.jpg",
+    occupation:"Virksomhedsejer",
+    stars:5,
+    discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 ]
 // error checking 
@@ -37,7 +58,7 @@ function appendreviws(reviews){
         // error checking 
         console.log(review)
         // here is how the content is setup for the html, and added in the div whit the id review
-        document.querySelector("#reviews").innerHTML+=`<article class="review">
+        document.querySelector("#reviews").innerHTML+=`<div class="review">
         <div class="foto"><img src="${review.foto}"></div>
         <div class="review-background">
         <div class="stras"><p>${review.stras}</p></div>
@@ -45,10 +66,17 @@ function appendreviws(reviews){
         <div class="occupation"><p>${review.occupation}</p></div>
         <div class="discription"><p>${review.discription}</p></div>
         </div>
-        </article>
+        </div>
         `
     }
 
 }
 // execute the append function using the data in the array allReviews
 appendreviws(allReviews);
+$(document).ready(function(){
+    $('#reviews').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 3
+    })
+})
