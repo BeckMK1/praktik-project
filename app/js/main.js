@@ -88,6 +88,7 @@ function appendreviws(reviews){
         // error checking 
         console.log(review)
         // here is how the content is setup for the html, and added in the div whit the id review
+        // review.starX is for star rating see readme for more info
         
         document.querySelector("#reviews").innerHTML+=`<div class="review">
         <div class="foto">
@@ -116,10 +117,27 @@ appendreviws(allReviews);
 $(document).ready(function(){
     $('#reviews').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         prevArrow:'<img class="slick_prev" src="images/prev.png">',
         nextArrow:'<img class="slick_next" src="images/next.png">',
         draggable:false,
+        responsive:[
+            {
+            breakpoint: 1042,
+            settings:{
+                slidesToShow: 3,
+                slidesToScroll: 3,
+            }
+            },
+            {
+                breakpoint: 740,
+                settings:{
+                    slidesToShow: 1,
+                    slidesToScroll: 1, 
+                    draggable:true,
+                }
+            }  
+        ]
       });
 })
