@@ -2,6 +2,7 @@ html,
 body{
 height: 100%;
 margin: 0;
+overflow-y: hidden;
 }
 
 p, h1{
@@ -166,8 +167,4 @@ border-radius:24px;
      width: 250px;
      
     }
-}
-.slick-list{
-height: 100%;
-width: 100%;
 }
