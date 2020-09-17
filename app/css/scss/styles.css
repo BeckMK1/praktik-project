@@ -82,6 +82,7 @@ p, h1 {
   z-index: 0; }
 
 .stras {
+  margin-top: 16px;
   float: right;
   margin-right: 32px; }
 
@@ -120,3 +121,6 @@ p, h1 {
 
 .slick-slide:focus {
   outline: none; }
+
+.checked {
+  color: orange; }

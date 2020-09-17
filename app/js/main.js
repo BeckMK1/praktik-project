@@ -4,52 +4,82 @@ let allReviews = [
     name:"Naven navensen",
     foto:"./images/placeholder.jpg",
     occupation:"Virksomhedsejer",
-    stars:5,
+    star1:'fa fa-star checked',
+    star2:'fa fa-star checked',
+    star3:'fa fa-star checked',
+    star4:'fa fa-star checked',
+    star5:'fa fa-star checked',
     discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 {
     name:"Naven navensen",
     foto:"./images/placeholder.jpg",
     occupation:"Virksomhedsejer",
-    stars:5,
+    star1:'fa fa-star checked',
+    star2:'fa fa-star checked',
+    star3:'fa fa-star',
+    star4:'fa fa-star',
+    star5:'fa fa-star',
     discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 {
     name:"Naven navensen",
     foto:"./images/placeholder.jpg",
     occupation:"Virksomhedsejer",
-    stars:5,
+    star1:'fa fa-star checked',
+    star2:'fa fa-star checked',
+    star3:'fa fa-star checked',
+    star4:'fa fa-star checked',
+    star5:'fa fa-star',
     discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 {
     name:"Naven navensen",
     foto:"./images/placeholder.jpg",
     occupation:"Virksomhedsejer",
-    stars:5,
+    star1:'fa fa-star checked',
+    star2:'fa fa-star checked',
+    star3:'fa fa-star checked',
+    star4:'fa fa-star checked',
+    star5:'fa fa-star checked',
     discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 {
     name:"Naven navensen",
     foto:"./images/placeholder.jpg",
     occupation:"Virksomhedsejer",
-    stars:5,
+    star1:'fa fa-star checked',
+    star2:'fa fa-star checked',
+    star3:'fa fa-star checked',
+    star4:'fa fa-star checked',
+    star5:'fa fa-star checked',
     discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 {
     name:"Naven navensen",
     foto:"./images/placeholder.jpg",
     occupation:"Virksomhedsejer",
-    stars:5,
+    star1:'fa fa-star checked',
+    star2:'fa fa-star checked',
+    star3:'fa fa-star checked',
+    star4:'fa fa-star checked',
+    star5:'fa fa-star checked',
     discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 {
     name:"Naven navensen",
     foto:"./images/placeholder.jpg",
     occupation:"Virksomhedsejer",
-    stars:5,
+    star1:'fa fa-star checked',
+    star2:'fa fa-star checked',
+    star3:'fa fa-star checked',
+    star4:'fa fa-star checked',
+    star5:'fa fa-star checked',
     discription:"Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder vaer konverteringerne steget mere end 150%."
 },
 ]
+
+
 // error checking 
 console.log(allReviews)
 // appends all reviews to html
@@ -58,13 +88,20 @@ function appendreviws(reviews){
         // error checking 
         console.log(review)
         // here is how the content is setup for the html, and added in the div whit the id review
+        
         document.querySelector("#reviews").innerHTML+=`<div class="review">
         <div class="foto">
         <div class="foto-background"></div>
         <img src="${review.foto}">
         </div>
         <div class="review-background">
-        <div class="stras"><p>${review.stras}</p></div>
+        <div class="stras">
+        <span class="${review.star1}"></span>
+        <span class="${review.star2}"></span>
+        <span class="${review.star3}"></span>
+        <span class="${review.star4}"></span>
+        <span class="${review.star5}"></span>
+        </div>
         <div class="name"><p>${review.name}</p></div>
         <div class="occupation"><p>${review.occupation}</p></div>
         <div class="discription"><p>${review.discription}</p></div>
